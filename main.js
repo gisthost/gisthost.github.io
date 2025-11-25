@@ -34,8 +34,9 @@
   }
 
   // 2. get gist id and file name
+  // Strip anything after '=' or '&' from the first segment to extract clean gist ID
   query = query.split('/');
-  var gistId = query[0];
+  var gistId = query[0].split(/[=&]/)[0];
   var fileName = decodeURIComponent(query[1] || '');
 
   // 3. write data to blank
