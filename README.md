@@ -1,21 +1,23 @@
-# Gist HTML Preview
+# Gist Host
 
-Preview HTML file on Gist
+Host HTML files using GitHub Gists.
+
+A fork of the excellent [gisthost.github.io](https://gisthost.github.io/) by [Leon Huang](https://github.com/zlargon).
 
 ## Usage
 
-1. https://gistpreview.github.io/?:gist_id
+1. https://gisthost.github.io/?:gist_id
 
   Preview __index.html__ or __the first file__ in gist.
 
-2. https://gistpreview.github.io/?:gist_id/:file_name
+2. https://gisthost.github.io/?:gist_id/:file_name
   
   Preview specific __file_name__ in gist.
 
 ## Example
 
-https://gist.github.com/zlargon/9de497580ac33180e6128c187e2a93bc
+https://gisthost.github.io/?30b90f63285fdcdb5cef974a4970bd10/index.html
 
-## Github API Rate Limiting
+## GitHub API rate limits
 
 Unauthenticated requests are associated with your IP address, and not the user making requests. The rate limit allows you to make up to `60` requests per hour.
