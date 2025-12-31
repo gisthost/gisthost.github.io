@@ -2,7 +2,7 @@
 
 Host HTML files using GitHub Gists.
 
-A fork of the excellent [gisthost.github.io](https://gisthost.github.io/) by [Leon Huang](https://github.com/zlargon).
+A fork of the excellent [gistpreview](https://github.com/gistpreview/gistpreview.github.io/) by [Leon Huang](https://github.com/zlargon).
 
 ## Usage
 
