@@ -68,8 +68,23 @@
       throw new Error('File <strong>' + fileName + '</strong> is not exist');
     }
 
-    // 5. write data
-    var content = info.files[fileName].content;
+    var fileInfo = info.files[fileName];
+
+    // 5. fetch full content if truncated, otherwise use inline content
+    if (fileInfo.truncated && fileInfo.raw_url) {
+      return fetch(fileInfo.raw_url)
+        .then(function (res) {
+          if (!res.ok) {
+            throw new Error('Failed to fetch full content for <strong>' + fileName + '</strong>');
+          }
+          return res.text();
+        });
+    } else {
+      return fileInfo.content;
+    }
+  })
+  .then(function (content) {
+    // 6. write data
     document.write(content);
   })
   .catch(function (err) {
